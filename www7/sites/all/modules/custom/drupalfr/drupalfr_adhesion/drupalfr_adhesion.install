@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+/*function drupalfr_adhesion_install() {
+  
+}*/
