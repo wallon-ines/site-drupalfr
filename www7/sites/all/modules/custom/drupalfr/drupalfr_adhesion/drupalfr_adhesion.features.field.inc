@@ -142,7 +142,139 @@ function drupalfr_adhesion_field_default_fields() {
           ),
         ),
         'type' => 'addressfield_standard',
-        'weight' => -10,
+        'weight' => '-10',
+      ),
+    ),
+  );
+
+  // Exported field: 'commerce_customer_profile-billing-field_carte_adherent'.
+  $fields['commerce_customer_profile-billing-field_carte_adherent'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_carte_adherent',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => 'Ma carte d\'adhérent me sera remise lors d\'un événement à venir',
+          1 => 'Je souhaite recevoir par courrier ma carte d\'adhérent',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'billing',
+      'default_value' => array(
+        0 => array(
+          'value' => 0,
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => -9,
+        ),
+      ),
+      'entity_type' => 'commerce_customer_profile',
+      'field_name' => 'field_carte_adherent',
+      'label' => 'Carte d\'adhérent',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(
+          'display_label' => 0,
+        ),
+        'type' => 'options_onoff',
+        'weight' => '31',
+      ),
+    ),
+  );
+
+  // Exported field: 'commerce_customer_profile-billing-field_groupe_local'.
+  $fields['commerce_customer_profile-billing-field_groupe_local'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_groupe_local',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          'paris' => 'Paris',
+          'lyon' => 'Lyon',
+          'marseille' => 'Marseille',
+          'montpellier' => 'Montpellier',
+          'toulouse' => 'Toulouse',
+          'rouen' => 'Rouen',
+          'belgique' => 'Belgique',
+          'autre' => 'Autre',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'billing',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Saisissez le groupe local auprès duquel vous êtes le plus proche. Si vous pourrez sans doute récupérer votre carte d\'adhérent lors d\'une des rencontres de ce groupe.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => -8,
+        ),
+      ),
+      'entity_type' => 'commerce_customer_profile',
+      'field_name' => 'field_groupe_local',
+      'label' => 'Groupe local',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '32',
       ),
     ),
   );
@@ -1011,12 +1143,15 @@ function drupalfr_adhesion_field_default_fields() {
   t('Adhésion');
   t('Adresse');
   t('Body');
+  t('Carte d\'adhérent');
   t('Comment');
   t('Display path');
   t('Eléments de commande');
+  t('Groupe local');
   t('Informations de facturation');
   t('Price');
   t('Product');
+  t('Saisissez le groupe local auprès duquel vous êtes le plus proche. Si vous pourrez sans doute récupérer votre carte d\'adhérent lors d\'une des rencontres de ce groupe.');
   t('Total');
   t('Total de la commande');
   t('Unit price');

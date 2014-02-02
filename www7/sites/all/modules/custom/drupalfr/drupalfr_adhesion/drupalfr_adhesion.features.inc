@@ -15,6 +15,13 @@ function drupalfr_adhesion_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function drupalfr_adhesion_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function drupalfr_adhesion_node_info() {
