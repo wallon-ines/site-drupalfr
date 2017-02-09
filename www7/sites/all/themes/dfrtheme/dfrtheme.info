@@ -22,6 +22,7 @@ stylesheets[screen][] = css/pages.css
 
 
 scripts[] = js/dfrtheme.js
+scripts[] = js/faq.js
 
 ; Regions --------------------------------------------------------------------
 ; these content regions are available for block placement
